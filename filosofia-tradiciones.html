@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filosofía en Otras Tradiciones Culturales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #F5F0E8;
+  --bg-secondary: #EDE7DB;
+  --bg-card: #FAF7F2;
+  --bg-card-hover: #FFFFFF;
+  --bg-accent: #E8DFD0;
+  --text-primary: #2C2418;
+  --text-secondary: #6B5D4D;
+  --text-tertiary: #9C8B78;
+  --accent-warm: #C4956A;
+  --accent-warm-light: #D4A87A;
+  --accent-deep: #8B6E4E;
+  --accent-subtle: #B8A692;
+  --border-light: #E0D6C8;
+  --border-medium: #D0C4B2;
+  --shadow-soft: 0 2px 12px rgba(44,36,24,0.06);
+  --shadow-medium: 0 4px 24px rgba(44,36,24,0.10);
+  --shadow-lift: 0 8px 40px rgba(44,36,24,0.12);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(196,149,106,0.12) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -300px; left: -200px;
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(139,110,78,0.08) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+/* ── Header ── */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(245,240,232,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 0 2rem;
+}
+
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+}
+
+.logo { display: flex; align-items: center; gap: 14px; }
+
+.logo-icon {
+  width: 42px; height: 42px;
+  background: linear-gradient(135deg, var(--accent-warm) 0%, var(--accent-deep) 100%);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700;
+  box-shadow: 0 2px 8px rgba(196,149,106,0.3);
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 600;
+  color: var(--text-primary); letter-spacing: -0.02em;
+}
+.logo-text span { color: var(--accent-warm); }
+
+.header-subtitle {
+  font-size: 0.82rem; color: var(--text-tertiary);
+  font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Hero ── */
+.hero {
+  max-width: 1200px; margin: 0 auto;
+  padding: 4.5rem 2rem 3rem;
+  position: relative; z-index: 1;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: 999px;
+  padding: 5px 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-deep);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700; line-height: 1.15;
+  color: var(--text-primary); letter-spacing: -0.03em;
+  max-width: 780px; margin: 0 auto;
+}
+
+.hero h1 em { font-style: italic; color: var(--accent-warm); }
+
+.hero-description {
+  margin-top: 1.4rem;
+  font-size: 1.1rem; color: var(--text-secondary);
+  max-width: 580px; margin-left: auto; margin-right: auto;
+  font-weight: 300; line-height: 1.75;
+}
+
+.hero-line {
+  margin: 2.5rem auto 0;
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, var(--accent-warm), transparent);
+  border-radius: 2px;
+}
+
+/* ── Nav tabs ── */
+.nav-bar {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 2rem 2rem;
+  position: relative; z-index: 1;
+}
+
+.nav-tabs {
+  display: flex; gap: 0.5rem;
+  flex-wrap: wrap;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.nav-tab {
+  display: flex; align-items: center; gap: 8px;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  border: none; background: none;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem; font-weight: 500;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.nav-tab:hover {
+  background: var(--bg-accent);
+  color: var(--text-primary);
+}
+
+.nav-tab.active {
+  background: linear-gradient(135deg, var(--accent-warm), var(--accent-deep));
+  color: white;
+  box-shadow: 0 2px 8px rgba(196,149,106,0.3);
+}
+
+.nav-tab .tab-icon { font-size: 15px; }
+
+/* ── Main content ── */
+.main {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 2rem 5rem;
+  position: relative; z-index: 1;
+}
+
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* ── Section intro card ── */
+.intro-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--accent-warm), var(--accent-warm-light), transparent);
+}
+
+.intro-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem; font-weight: 700;
+  color: var(--text-primary); letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+
+.intro-card .subtitle {
+  font-size: 0.85rem; color: var(--accent-warm);
+  font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; margin-bottom: 1.2rem;
+}
+
+.intro-card p {
+  font-size: 1.02rem; color: var(--text-secondary);
+  line-height: 1.8; font-weight: 300;
+  max-width: 800px;
+}
+
+.intro-card p + p { margin-top: 0.9rem; }
+
+.intro-card .highlight {
+  font-weight: 500; color: var(--text-primary);
+}
+
+/* ── Concepts row ── */
+.concepts-row {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-top: 1.4rem;
+}
+
+.concept-tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--bg-accent);
+  border: 1px solid var(--border-medium);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.82rem; font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.concept-tag:hover {
+  background: var(--accent-warm);
+  color: white; border-color: var(--accent-warm);
+}
+
+.concept-tag[data-tooltip] {
+  cursor: pointer;
+  position: relative;
+}
+
+.concept-tag[data-tooltip]::after {
+  content: '?';
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 15px; height: 15px; border-radius: 50%;
+  background: var(--accent-deep); color: white;
+  font-size: 9px; font-weight: 700;
+  margin-left: 2px; flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.concept-tag[data-tooltip]:hover::after {
+  background: white; color: var(--accent-warm);
+}
+
+/* ── Tooltip popup ── */
+#tooltip-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  max-width: 320px;
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lift);
+  padding: 0;
+  overflow: hidden;
+  animation: tooltipIn 0.2s cubic-bezier(0.23,1,0.32,1);
+  pointer-events: none;
+}
+
+#tooltip-popup.visible {
+  display: block;
+  pointer-events: auto;
+}
+
+@keyframes tooltipIn {
+  from { opacity: 0; transform: translateY(6px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.tooltip-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 16px 10px;
+  background: linear-gradient(135deg, rgba(196,149,106,0.12), rgba(139,110,78,0.07));
+  border-bottom: 1px solid var(--border-light);
+}
+
+.tooltip-icon {
+  width: 30px; height: 30px; border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent-warm), var(--accent-deep));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 13px; font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  flex-shrink: 0;
+}
+
+.tooltip-term {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem; font-weight: 700;
+  color: var(--text-primary); letter-spacing: -0.01em;
+}
+
+.tooltip-origin {
+  font-size: 0.7rem; font-weight: 600;
+  color: var(--accent-warm); letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tooltip-body {
+  padding: 12px 16px 14px;
+}
+
+.tooltip-body p {
+  font-size: 0.87rem; color: var(--text-secondary);
+  line-height: 1.7; font-weight: 300;
+}
+
+.tooltip-close {
+  position: absolute; top: 8px; right: 8px;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--bg-accent); border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--text-tertiary);
+  font-size: 12px; transition: all 0.2s ease;
+}
+
+.tooltip-close:hover {
+  background: var(--accent-warm); color: white;
+}
+
+/* ── Two-column grid ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── School card ── */
+.school-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative; overflow: hidden;
+}
+
+.school-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  opacity: 0; transition: opacity 0.3s ease;
+}
+
+.school-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-3px);
+}
+
+.school-card:hover::before { opacity: 1; }
+
+.school-card.c-amber::before { background: linear-gradient(90deg, #C4956A, #D4A87A); }
+.school-card.c-teal::before  { background: linear-gradient(90deg, #6BAAA0, #7DBBB1); }
+.school-card.c-blue::before  { background: linear-gradient(90deg, #6A8EC4, #7A9ED4); }
+.school-card.c-coral::before { background: linear-gradient(90deg, #C47C6A, #D48C7A); }
+.school-card.c-green::before { background: linear-gradient(90deg, #7AA86A, #8AB87A); }
+.school-card.c-purple::before{ background: linear-gradient(90deg, #9B8BC4, #AB9BD4); }
+
+.school-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.school-icon.amber { background: rgba(196,149,106,0.15); }
+.school-icon.teal  { background: rgba(107,170,160,0.15); }
+.school-icon.blue  { background: rgba(106,142,196,0.15); }
+.school-icon.coral { background: rgba(196,124,106,0.15); }
+.school-icon.green { background: rgba(122,168,106,0.15); }
+.school-icon.purple{ background: rgba(155,139,196,0.15); }
+
+.school-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.2rem;
+}
+
+.school-period {
+  font-size: 0.78rem; color: var(--accent-warm);
+  font-weight: 600; letter-spacing: 0.05em;
+  text-transform: uppercase; margin-bottom: 0.9rem;
+}
+
+.school-card p {
+  font-size: 0.92rem; color: var(--text-secondary);
+  line-height: 1.75; font-weight: 300;
+}
+
+.school-card p + p { margin-top: 0.7rem; }
+
+.school-card .em-name {
+  font-style: italic; color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* ── Thinker row ── */
+.thinker-row {
+  display: flex; flex-direction: column; gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.thinker-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.8rem;
+  display: flex; align-items: flex-start; gap: 1.2rem;
+  transition: all 0.25s ease;
+}
+
+.thinker-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-soft);
+}
+
+.thinker-avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-warm), var(--accent-deep));
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; font-weight: 700;
+  flex-shrink: 0;
+}
+
+.thinker-body { flex: 1; min-width: 0; }
+
+.thinker-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-weight: 600;
+  color: var(--text-primary);
+}
+
+.thinker-dates {
+  font-size: 0.78rem; color: var(--accent-warm);
+  font-weight: 600; letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.thinker-body p {
+  font-size: 0.9rem; color: var(--text-secondary);
+  line-height: 1.7; font-weight: 300;
+}
+
+/* ── Note box ── */
+.note-box {
+  background: rgba(196,149,106,0.08);
+  border: 1px solid rgba(196,149,106,0.25);
+  border-left: 4px solid var(--accent-warm);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1.2rem 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.note-box .note-label {
+  font-size: 0.75rem; font-weight: 600;
+  color: var(--accent-warm); letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 0.4rem;
+}
+
+.note-box p {
+  font-size: 0.92rem; color: var(--text-secondary);
+  line-height: 1.7; font-weight: 300;
+}
+
+/* ── Comparison table ── */
+.comp-table-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.comp-table {
+  width: 100%; border-collapse: collapse;
+}
+
+.comp-table thead tr {
+  background: linear-gradient(135deg, rgba(196,149,106,0.12), rgba(139,110,78,0.08));
+  border-bottom: 2px solid var(--border-medium);
+}
+
+.comp-table th {
+  padding: 1rem 1.4rem;
+  text-align: left;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem; font-weight: 600;
+  color: var(--accent-deep);
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+
+.comp-table td {
+  padding: 1rem 1.4rem;
+  font-size: 0.92rem; color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top; line-height: 1.6;
+}
+
+.comp-table tr:last-child td { border-bottom: none; }
+
+.comp-table tr:hover td { background: var(--bg-accent); }
+
+.comp-table td:first-child {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.trad-dot {
+  display: inline-block;
+  width: 8px; height: 8px; border-radius: 50%;
+  margin-right: 8px; vertical-align: middle;
+}
+
+/* ── Questions card ── */
+.questions-card {
+  background: linear-gradient(135deg, rgba(196,149,106,0.08), rgba(139,110,78,0.05));
+  border: 1px solid rgba(196,149,106,0.2);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+}
+
+.questions-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 1.2rem;
+}
+
+.question-item {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.question-item:last-child { border-bottom: none; }
+
+.q-num {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-warm), var(--accent-deep));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 0.78rem; font-weight: 700;
+  flex-shrink: 0; margin-top: 1px;
+}
+
+.question-item p {
+  font-size: 0.97rem; color: var(--text-secondary);
+  line-height: 1.7; font-weight: 300; font-style: italic;
+}
+
+/* ── Footer ── */
+.footer {
+  max-width: 1200px; margin: 0 auto;
+  padding: 2rem; text-align: center;
+  color: var(--text-tertiary); font-size: 0.82rem;
+  border-top: 1px solid var(--border-light);
+  position: relative; z-index: 1;
+}
+
+.footer a {
+  color: var(--accent-warm); text-decoration: none;
+  border-bottom: 1px solid var(--accent-warm-light);
+  transition: color 0.2s ease;
+}
+.footer a:hover { color: var(--accent-deep); }
+
+/* ── Animations ── */
+.school-card, .thinker-card {
+  opacity: 0; transform: translateY(18px);
+  animation: cardIn 0.5s cubic-bezier(0.23,1,0.32,1) forwards;
+}
+
+@keyframes cardIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.school-card:nth-child(1) { animation-delay: 0.05s; }
+.school-card:nth-child(2) { animation-delay: 0.10s; }
+.school-card:nth-child(3) { animation-delay: 0.15s; }
+.school-card:nth-child(4) { animation-delay: 0.20s; }
+.school-card:nth-child(5) { animation-delay: 0.25s; }
+.school-card:nth-child(6) { animation-delay: 0.30s; }
+.thinker-card:nth-child(1) { animation-delay: 0.05s; }
+.thinker-card:nth-child(2) { animation-delay: 0.10s; }
+.thinker-card:nth-child(3) { animation-delay: 0.15s; }
+.thinker-card:nth-child(4) { animation-delay: 0.20s; }
+.thinker-card:nth-child(5) { animation-delay: 0.25s; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .two-col { grid-template-columns: 1fr; }
+  .three-col { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 2.5rem 1.2rem 2rem; }
+  .main { padding: 0 1.2rem 3rem; }
+  .nav-bar { padding: 0 1.2rem 1.5rem; }
+  .three-col { grid-template-columns: 1fr; }
+  .header-subtitle { display: none; }
+  .intro-card { padding: 1.5rem; }
+  .thinker-card { flex-direction: column; }
+  .comp-table th, .comp-table td { padding: 0.8rem 1rem; font-size: 0.82rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">φ</div>
+      <div>
+        <div class="logo-text">Historia de la <span>Filosofía</span></div>
+      </div>
+    </div>
+    <div class="header-subtitle">IES Alquipir · Cehegín</div>
+  </div>
+</header>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="hero-badge">Apuntes · 2º Bachillerato</div>
+  <h1>La filosofía en <em>otras tradiciones</em> culturales</h1>
+  <p class="hero-description">
+    Más allá del logos griego: un recorrido por las grandes tradiciones filosóficas de la humanidad, desde la India y China hasta el mundo islámico y africano.
+  </p>
+  <div class="hero-line"></div>
+</section>
+
+<!-- ── Nav tabs ── -->
+<nav class="nav-bar">
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showPanel('intro', this)">
+      <span class="tab-icon">🌍</span> Introducción
+    </button>
+    <button class="nav-tab" onclick="showPanel('india', this)">
+      <span class="tab-icon">🪷</span> Filosofía india
+    </button>
+    <button class="nav-tab" onclick="showPanel('china', this)">
+      <span class="tab-icon">☯️</span> Filosofía china
+    </button>
+    <button class="nav-tab" onclick="showPanel('islam', this)">
+      <span class="tab-icon">📜</span> Filosofía islámica
+    </button>
+    <button class="nav-tab" onclick="showPanel('africa', this)">
+      <span class="tab-icon">🌱</span> Filosofía africana
+    </button>
+    <button class="nav-tab" onclick="showPanel('comparativa', this)">
+      <span class="tab-icon">⚖️</span> Comparativa
+    </button>
+  </div>
+</nav>
+
+<!-- ── Main ── -->
+<main class="main">
+
+  <!-- INTRO -->
+  <div id="panel-intro" class="panel active">
+    <div class="intro-card">
+      <div class="subtitle">El problema de la definición</div>
+      <h2>¿Qué es la filosofía?</h2>
+      <p>La tradición occidental ha tendido a identificar "filosofía" con su propio modelo: el <span class="highlight">logos griego</span>, el análisis racional argumentativo y el lenguaje conceptual abstracto. Pero esto es un <span class="highlight">etnocentrismo filosófico</span>: confundir una forma de hacer filosofía con la filosofía misma.</p>
+      <p>Hoy se reconoce que muchas culturas han producido reflexión sistemática y rigurosa sobre los grandes interrogantes humanos: el ser, el conocimiento, la ética, el cosmos y la existencia. Esas tradiciones merecen el nombre de filosofía aunque usen métodos o formas distintos.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="school-card c-teal">
+        <div class="school-icon teal">❓</div>
+        <h3>Preguntas filosóficas universales</h3>
+        <div class="school-period">Comunes a todas las tradiciones</div>
+        <p>A pesar de sus profundas diferencias de método y forma, las grandes tradiciones filosóficas convergen en preguntas fundamentales:</p>
+        <div class="concepts-row" style="margin-top:1rem">
+          <span class="concept-tag" data-tooltip="ontologia" data-term="¿Qué es real?" data-origin="Metafísica / Ontología" data-icon="◈" data-desc="La pregunta ontológica por excelencia: ¿qué existe realmente? ¿La materia, las ideas, el espíritu, la energía? Cada tradición filosófica responde de manera distinta: el vedanta dice que solo el Brahman es real; Platón, que las Ideas eternas; el materialismo, que solo la materia.">¿Qué es real?</span>
+          <span class="concept-tag" data-tooltip="epistemologia" data-term="¿Cómo conocemos?" data-origin="Epistemología" data-icon="◉" data-desc="La pregunta epistemológica central: ¿cuáles son las fuentes y los límites del conocimiento humano? ¿Razón, experiencia, meditación, revelación? Kant la llamó la 'pregunta crítica' de la filosofía.">¿Cómo conocemos?</span>
+          <span class="concept-tag" data-tooltip="etica" data-term="¿Cómo vivir bien?" data-origin="Ética" data-icon="◇" data-desc="La pregunta ética fundamental. Aristóteles la formuló como la búsqueda de la eudaimonía (florecimiento). Confucio la respondió con el cultivo de la virtud en la vida social. El budismo, con el desapego y la compasión.">¿Cómo vivir bien?</span>
+          <span class="concept-tag" data-tooltip="antropologia" data-term="¿Qué somos?" data-origin="Antropología filosófica" data-icon="◎" data-desc="La pregunta sobre la naturaleza humana: ¿somos alma, cuerpo, mente, relación? Para Descartes, una sustancia pensante. Para el budismo, una corriente de procesos sin yo fijo. Para Ubuntu, un ser esencialmente comunitario.">¿Qué somos?</span>
+          <span class="concept-tag" data-tooltip="cosmologia" data-term="¿Hay sentido en el cosmos?" data-origin="Cosmología / Metafísica" data-icon="◆" data-desc="La pregunta sobre si el universo tiene orden, propósito o sentido. El Tao chino afirma que sí: hay un Camino cósmico. El budismo es más escéptico: el cosmos es impermanente y sin esencia fija. El nihilismo occidental lo niega.">¿Hay sentido en el cosmos?</span>
+        </div>
+      </div>
+
+      <div class="school-card c-amber">
+        <div class="school-icon amber">🔑</div>
+        <h3>Diferencia metodológica clave</h3>
+        <div class="school-period">Occidente vs. otras tradiciones</div>
+        <p>Mientras la filosofía occidental privilegia la <span class="em-name">argumentación lógica</span> y la separación sujeto-objeto, otras tradiciones integran la meditación, la narrativa mítica o la práctica vital como vías filosóficas igualmente legítimas.</p>
+        <p>No son filosofías "menos desarrolladas": son filosofías <span class="em-name">distintas</span>, con sus propios criterios de rigor y verdad.</p>
+        <a href="ampliacion-metodologica.html" style="display:inline-flex;align-items:center;gap:7px;margin-top:1.2rem;padding:9px 18px;background:linear-gradient(135deg,#C4956A,#8B6E4E);color:white;border-radius:8px;font-family:'Source Sans 3',sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;letter-spacing:0.02em;box-shadow:0 2px 8px rgba(196,149,106,0.3);transition:all 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 16px rgba(196,149,106,0.4)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 8px rgba(196,149,106,0.3)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          Ampliación de contenidos
+        </a>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <div class="note-label">Para reflexionar</div>
+      <p>¿Debe la filosofía ser necesariamente argumentativa y racional en sentido occidental? ¿O podemos considerar filosófica cualquier reflexión sistemática sobre la existencia humana, sea cual sea su método?</p>
+    </div>
+  </div>
+
+  <!-- INDIA -->
+  <div id="panel-india" class="panel">
+    <div class="intro-card">
+      <div class="subtitle">Darshanas · desde el s. XV a.C.</div>
+      <h2>Filosofía india</h2>
+      <p>El término sánscrito <em>darshana</em> ("visión", "perspectiva") designa los sistemas filosóficos indios. A diferencia de Occidente, en India la filosofía está íntimamente ligada a la liberación espiritual (<em>moksha</em>). El pensamiento no es un fin en sí mismo: es un camino hacia la salvación.</p>
+      <div class="concepts-row">
+        <span class="concept-tag" data-tooltip="karma" data-term="Karma" data-origin="Sánscrito · Filosofía india" data-icon="K" data-desc="Literalmente 'acción'. Principio según el cual toda acción tiene consecuencias que afectan a las vidas presentes y futuras. No es castigo divino sino una ley cósmica impersonal: cada acción moral o inmoral deja una 'huella' que condiciona el renacimiento.">Karma</span>
+        <span class="concept-tag" data-tooltip="samsara" data-term="Samsara" data-origin="Sánscrito · ciclo de renacimientos" data-icon="S" data-desc="El ciclo eterno de nacimiento, muerte y renacimiento. Para el hinduismo y el budismo, el ser ordinario está atrapado en este ciclo por la ignorancia (avidya) y el deseo (tanha). La liberación (moksha/nirvana) consiste en salir del samsara.">Samsara (ciclo de renacimientos)</span>
+        <span class="concept-tag" data-tooltip="moksha" data-term="Moksha" data-origin="Sánscrito · liberación" data-icon="M" data-desc="La liberación definitiva del ciclo del samsara. Es el fin último de la filosofía india ortodoxa. En el vedanta, se alcanza reconociendo la identidad entre el Atman (yo) y el Brahman (el Todo). Equivalente al nirvana budista.">Moksha (liberación)</span>
+        <span class="concept-tag" data-tooltip="dharma" data-term="Dharma" data-origin="Sánscrito · ley cósmica" data-icon="D" data-desc="Concepto polisémico: puede significar deber moral, ley cósmica, enseñanza del Buda o naturaleza propia de cada ser. El cumplimiento del dharma propio (svadharma) es central en el hinduismo. El Buda llama 'Dharma' a su enseñanza liberadora.">Dharma (deber/ley cósmica)</span>
+        <span class="concept-tag" data-tooltip="maya" data-term="Maya" data-origin="Sánscrito · ilusión" data-icon="Mā" data-desc="El poder de ilusión que hace que percibamos el mundo como plural y separado cuando en realidad solo existe el Brahman. No significa que el mundo no exista, sino que no es lo que parece: su existencia es dependiente e ilusoria comparada con la realidad absoluta.">Maya (ilusión)</span>
+        <span class="concept-tag" data-tooltip="nirvana" data-term="Nirvana" data-origin="Sánscrito · extinción" data-icon="N" data-desc="Literalmente 'extinción' (del fuego del deseo, la aversión y la ignorancia). Estado de liberación del sufrimiento y del ciclo del samsara. No es la nada ni el paraíso: es la cesación del 'yo' ilusorio. El Buda se resistió a describir positivamente lo que es.">Nirvana</span>
+        <span class="concept-tag" data-tooltip="atman" data-term="Atman" data-origin="Sánscrito · yo verdadero" data-icon="Ā" data-desc="El yo verdadero o el sí-mismo profundo. Para el vedanta, el Atman es idéntico al Brahman (el Absoluto): 'Tat tvam asi' — 'Eso eres tú'. Para el budismo, en cambio, el Atman no existe: todo es impermanente y sin esencia fija (anātman).">Atman (yo verdadero)</span>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="school-card c-amber">
+        <div class="school-icon amber">🕉️</div>
+        <h3>Vedanta</h3>
+        <div class="school-period">Escuela ortodoxa · acepta los Vedas</div>
+        <p>La realidad última es el <span class="em-name">Brahman</span> (el Todo, el Absoluto). El yo individual (<span class="em-name">Atman</span>) es, en el fondo, idéntico a Brahman. La ignorancia (<span class="em-name">avidya</span>) nos hace creer que somos seres separados.</p>
+        <p>La liberación consiste en reconocer esta identidad: <em>"Tat tvam asi"</em> — "Eso eres tú".</p>
+      </div>
+
+      <div class="school-card c-teal">
+        <div class="school-icon teal">⚖️</div>
+        <h3>Sāmkhya y Yoga</h3>
+        <div class="school-period">Dualismo · base del Yoga clásico</div>
+        <p>Dualismo entre conciencia pura (<span class="em-name">purusha</span>) y materia (<span class="em-name">prakriti</span>). El sufrimiento surge de confundir el yo con la materia.</p>
+        <p>El Yoga —cuya base filosófica es el Sāmkhya— propone la disciplina psicofísica como vía de liberación.</p>
+      </div>
+
+      <div class="school-card c-blue">
+        <div class="school-icon blue">🧠</div>
+        <h3>Nyāya</h3>
+        <div class="school-period">Lógica y epistemología india</div>
+        <p>Sistema de lógica y teoría del conocimiento. Reconoce cuatro fuentes válidas de conocimiento: <span class="em-name">percepción</span>, <span class="em-name">inferencia</span>, <span class="em-name">comparación</span> y <span class="em-name">testimonio</span>.</p>
+        <p>Constituye una epistemología sofisticada comparable a la lógica aristotélica.</p>
+      </div>
+
+      <div class="school-card c-coral">
+        <div class="school-icon coral">☸️</div>
+        <h3>Budismo</h3>
+        <div class="school-period">Escuela heterodoxa · s. V a.C.</div>
+        <p>Gautama Buda enseña que el sufrimiento (<span class="em-name">dukkha</span>) surge del deseo y la ilusión del yo. Las <span class="em-name">Cuatro Nobles Verdades</span> diagnostican el sufrimiento y proponen su cura.</p>
+        <p>Concepto central: <span class="em-name">anātman</span> (no-yo): no existe un yo permanente e individual.</p>
+      </div>
+    </div>
+
+    <div class="school-card c-green" style="margin-bottom:1.5rem">
+      <div class="school-icon green">🌿</div>
+      <h3>Jainismo</h3>
+      <div class="school-period">Escuela heterodoxa · ética de la no-violencia</div>
+      <p>El alma existe y se purifica mediante la <span class="em-name">ahimsa</span> (no-violencia) y la renuncia. La verdad es perspectivista: toda afirmación es parcialmente verdadera (<span class="em-name">anekantavada</span>).</p>
+    </div>
+  </div>
+
+  <!-- CHINA -->
+  <div id="panel-china" class="panel">
+    <div class="intro-card">
+      <div class="subtitle">Período de las Cien Escuelas · s. VI–III a.C.</div>
+      <h2>Filosofía china</h2>
+      <p>La filosofía china surge principalmente durante el "período de los reinos combatientes". Su rasgo más llamativo es la orientación <em>ético-política</em>: más que preguntas metafísicas abstractas, busca el orden justo, la armonía social y el buen gobierno. El sabio no es solo un teórico sino alguien que transforma la realidad.</p>
+      <div class="concepts-row">
+        <span class="concept-tag" data-tooltip="tao" data-term="Tao (道)" data-origin="Chino · el Camino" data-icon="道" data-desc="El principio originario e inefable del cosmos. No es Dios ni la materia ni la energía: es anterior a cualquier distinción. Laozi dice que 'el Tao que puede nombrarse no es el Tao eterno'. La sabiduría consiste en fluir con él, no en comprenderlo conceptualmente.">Tao (el Camino)</span>
+        <span class="concept-tag" data-tooltip="yinyang" data-term="Yin-Yang (陰陽)" data-origin="Chino · polaridad complementaria" data-icon="☯" data-desc="Principio de polaridad complementaria: ningún opuesto existe sin el otro (luz/oscuridad, masculino/femenino, activo/pasivo). No son contrarios que se excluyen sino fuerzas que se generan y equilibran mutuamente. El círculo Yin-Yang muestra que cada polo contiene el germen del otro.">Yin-Yang</span>
+        <span class="concept-tag" data-tooltip="wuwei" data-term="Wu wei (無為)" data-origin="Chino · no-acción" data-icon="無" data-desc="Literalmente 'no-acción' o 'acción sin esfuerzo forzado'. No significa pasividad sino actuar en armonía con el flujo natural de las cosas, sin imposición ni violencia. El taoísta no lucha contra la corriente: nada con ella. El agua es su metáfora favorita.">Wu wei (no-forzar)</span>
+        <span class="concept-tag" data-tooltip="ren" data-term="Rén (仁)" data-origin="Chino · benevolencia" data-icon="仁" data-desc="La virtud cardinal del confucianismo. A veces traducida como 'humanidad', 'benevolencia' o 'amor al prójimo'. Es la capacidad de ponerse en el lugar del otro y actuar con consideración. Confucio la definió como 'no hacer a los demás lo que no quieres para ti'.">Rén (benevolencia)</span>
+        <span class="concept-tag" data-tooltip="de" data-term="De (德)" data-origin="Chino · virtud / poder" data-icon="德" data-desc="La virtud o el poder interior que emana de estar en armonía con el Tao. No es solo bondad moral sino una fuerza que transforma el entorno sin esfuerzo. El gobernante con De no necesita imponer: su ejemplo basta para ordenar la sociedad.">De (virtud/poder)</span>
+        <span class="concept-tag" data-tooltip="li" data-term="Lǐ (禮)" data-origin="Chino · ritual / norma" data-icon="禮" data-desc="El ritual, la etiqueta, las normas de comportamiento social. Para Confucio, el Lǐ no es mero formalismo: es el método filosófico que moldea el carácter. Practicar los gestos correctos en la familia, en la corte y en la comunidad es la vía hacia la sabiduría.">Li (ritual)</span>
+      </div>
+    </div>
+
+    <div class="three-col">
+      <div class="school-card c-amber">
+        <div class="school-icon amber">🏛️</div>
+        <h3>Confucianismo</h3>
+        <div class="school-period">Kǒng Fūzǐ · 551–479 a.C.</div>
+        <p>El orden social se funda en virtudes: <span class="em-name">rén</span> (benevolencia), <span class="em-name">yì</span> (rectitud), <span class="em-name">lǐ</span> (ritual). El gobernante virtuoso transforma la sociedad por el ejemplo.</p>
+        <p>El autoconocimiento y el cultivo moral son el camino hacia la perfección humana.</p>
+      </div>
+
+      <div class="school-card c-teal">
+        <div class="school-icon teal">🌊</div>
+        <h3>Taoísmo</h3>
+        <div class="school-period">Laozi · Zhuangzi · s. IV a.C.</div>
+        <p>El <span class="em-name">Tao</span> ("Camino") es el principio original del cosmos, inefable y sin nombre. La sabiduría consiste en fluir con él mediante el <span class="em-name">wu wei</span> (no-acción forzada).</p>
+        <p>Crítica a los artificios de la civilización: volver a la naturaleza espontánea.</p>
+      </div>
+
+      <div class="school-card c-blue">
+        <div class="school-icon blue">🧘</div>
+        <h3>Budismo Chan</h3>
+        <div class="school-period">= Zen japonés · s. VI d.C.</div>
+        <p>Fusión del budismo indio con el pensamiento chino. Privilegia la meditación directa (<span class="em-name">dhyana</span>) sobre las escrituras.</p>
+        <p>La iluminación es un salto súbito e intuitivo, no un proceso gradual de acumulación de conocimiento.</p>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <div class="note-label">Contraste con Occidente</div>
+      <p>Mientras la filosofía griega busca la <em>verdad</em> mediante la argumentación racional, la filosofía china busca la <em>armonía</em> mediante la práctica y el ritual. No es una filosofía menos rigurosa: es una filosofía orientada por valores distintos.</p>
+    </div>
+  </div>
+
+  <!-- ISLAM -->
+  <div id="panel-islam" class="panel">
+    <div class="intro-card">
+      <div class="subtitle">Al-Falsafa · Edad de Oro · s. IX–XII d.C.</div>
+      <h2>Filosofía islámica</h2>
+      <p>La filosofía islámica surge de la recepción y transformación del pensamiento griego —especialmente Aristóteles y Platón— en el mundo árabe. Los filósofos islámicos no son meros "transmisores": desarrollan aportaciones originales y mantienen tensiones creativas con la teología ortodoxa. Su influencia sobre la escolástica cristiana es decisiva.</p>
+      <div class="concepts-row">
+        <span class="concept-tag" data-tooltip="sernec" data-term="Ser necesario / contingente" data-origin="Metafísica islámica · Avicena" data-icon="◈" data-desc="Distinción central de Avicena: el 'ser necesario' (wājib al-wujūd) existe por sí mismo y no puede no existir: es Dios. El 'ser contingente' (mumkin al-wujūd) existe pero podría no existir: es todo lo creado. Esta distinción influyó enormemente en Tomás de Aquino.">Ser necesario / contingente</span>
+        <span class="concept-tag" data-tooltip="razonfe" data-term="Razón y Revelación" data-origin="Filosofía islámica medieval" data-icon="R" data-desc="La tensión central de la filosofía islámica: ¿son compatibles la razón filosófica (heredada de Aristóteles) y la revelación coránica? Averroes defendió su autonomía ('doble verdad'). Al-Ghazali rechazó la razón como vía para lo divino. Este debate estructuró también la escolástica cristiana.">Razón y Revelación</span>
+        <span class="concept-tag" data-tooltip="intelecto" data-term="Intelecto agente" data-origin="Aristotelismo árabe · Al-Farabi, Avicena" data-icon="I" data-desc="Concepto aristotélico reinterpretado por los filósofos islámicos. Es el principio activo del conocimiento: la facultad que ilumina los conceptos inteligibles. Al-Farabi lo identificó con el ángel Gabriel; Averroes con un intelecto único compartido por todos los humanos.">Intelecto agente</span>
+        <span class="concept-tag" data-tooltip="ciudad" data-term="Ciudad virtuosa" data-origin="Al-Farabi · filosofía política" data-icon="C" data-desc="Concepto de Al-Farabi inspirado en la República de Platón. La ciudad virtuosa es aquella gobernada por un filósofo-profeta que posee razón perfecta y capacidad de comunicar la verdad al pueblo mediante símbolos y revelación. Es la síntesis entre la política griega y el Islam.">Ciudad virtuosa</span>
+        <span class="concept-tag" data-tooltip="sufi" data-term="Mística sufí" data-origin="Islam · corriente espiritual" data-icon="ص" data-desc="El sufismo es la corriente mística del Islam. Busca la unión directa del alma con Dios mediante el amor, la meditación y la danza ritual (como los derviches giróvagos). Al-Ghazali defendió el sufismo frente a la filosofía racional, argumentando que la experiencia mística supera el razonamiento.">Mística sufí</span>
+      </div>
+    </div>
+
+    <div class="thinker-row">
+      <div class="thinker-card">
+        <div class="thinker-avatar">K</div>
+        <div class="thinker-body">
+          <div class="thinker-name">Al-Kindi</div>
+          <div class="thinker-dates">c. 801–873 d.C. · Primer filósofo árabe</div>
+          <p>Defiende la compatibilidad entre razón y revelación. Introductor del pensamiento griego en el Islam. Afirma que la filosofía y la teología buscan la misma verdad por caminos distintos.</p>
+        </div>
+      </div>
+
+      <div class="thinker-card">
+        <div class="thinker-avatar">F</div>
+        <div class="thinker-body">
+          <div class="thinker-name">Al-Farabi</div>
+          <div class="thinker-dates">872–950 d.C. · "El Segundo Maestro" (tras Aristóteles)</div>
+          <p>Teoría política inspirada en Platón: el filósofo-profeta como alma de la <em>ciudad virtuosa</em>. Armoniza la filosofía griega con el pensamiento islámico.</p>
+        </div>
+      </div>
+
+      <div class="thinker-card">
+        <div class="thinker-avatar">S</div>
+        <div class="thinker-body">
+          <div class="thinker-name">Avicena (Ibn Sina)</div>
+          <div class="thinker-dates">980–1037 d.C. · Canon de la medicina · metafísica del ser</div>
+          <p>Distingue entre <em>ser necesario</em> (Dios) y <em>ser contingente</em> (el mundo). Célebre argumento del <em>"hombre volante"</em>: precursor del cogito cartesiano. Su psicología sostiene que el alma es forma del cuerpo pero no se reduce a él.</p>
+        </div>
+      </div>
+
+      <div class="thinker-card">
+        <div class="thinker-avatar">R</div>
+        <div class="thinker-body">
+          <div class="thinker-name">Averroes (Ibn Rushd)</div>
+          <div class="thinker-dates">1126–1198 d.C. · El gran comentador de Aristóteles</div>
+          <p>Defiende la autonomía de la razón respecto a la fe (<em>doble verdad</em>). Su influencia sobre Tomás de Aquino y la escolástica cristiana es fundamental. Condenado por los teólogos de su tiempo.</p>
+        </div>
+      </div>
+
+      <div class="thinker-card">
+        <div class="thinker-avatar">G</div>
+        <div class="thinker-body">
+          <div class="thinker-name">Al-Ghazali</div>
+          <div class="thinker-dates">1058–1111 d.C. · Crítico de la filosofía racional</div>
+          <p>En <em>La incoherencia de los filósofos</em> refuta la metafísica aristotélica. Defiende el misticismo sufí frente al racionalismo filosófico. Représenta la tensión permanente entre razón y fe en la filosofía islámica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AFRICA -->
+  <div id="panel-africa" class="panel">
+    <div class="intro-card">
+      <div class="subtitle">Ubuntu · Tradición oral y escrita contemporánea</div>
+      <h2>Filosofía africana</h2>
+      <p>La filosofía africana ha sido históricamente ignorada o negada por el pensamiento colonial europeo. Hoy se reconoce como un campo rico y plural que incluye tanto tradiciones orales milenarias como producción filosófica escrita contemporánea de primer nivel. Su aportación más radical al pensamiento universal es la <em>ontología relacional</em>: el ser humano no es un individuo aislado sino un ser esencialmente comunitario.</p>
+      <div class="concepts-row">
+        <span class="concept-tag" data-tooltip="ubuntu" data-term="Ubuntu" data-origin="Lenguas bantúes · filosofía africana" data-icon="U" data-desc="'Umuntu ngumuntu ngabantu': una persona es persona a través de las demás personas. El yo no preexiste a la comunidad: se constituye en relación. Es la antítesis del individualismo cartesiano. Ubuntu es hoy un principio ético reconocido internacionalmente, popularizado por Nelson Mandela y Desmond Tutu.">Ubuntu (ser-con-otros)</span>
+        <span class="concept-tag" data-tooltip="maat" data-term="Ma'at" data-origin="Egipto antiguo · III milenio a.C." data-icon="𓆄" data-desc="Concepto egipcio que abarca verdad, justicia, armonía cósmica y orden moral. Es simultáneamente una diosa, un principio ético y un concepto filosófico. En el juicio del alma tras la muerte, el corazón del difunto se pesaba contra la pluma de Ma'at: si pesaba más, el alma era devorada.">Ma'at (armonía/justicia)</span>
+        <span class="concept-tag" data-tooltip="descolonizacion" data-term="Descolonización del saber" data-origin="Filosofía africana contemporánea" data-icon="D" data-desc="Proyecto filosófico que cuestiona la hegemonía del pensamiento europeo como universal. Autores como Frantz Fanon, Ngũgĩ wa Thiong'o o Boaventura de Sousa Santos argumentan que el colonialismo no solo dominó territorios: colonizó también las formas de pensar, los saberes y las lenguas.">Descolonización del saber</span>
+        <span class="concept-tag" data-tooltip="ontologia" data-term="Ontología comunitaria" data-origin="Filosofía africana · Ubuntu" data-icon="O" data-desc="Visión del ser humano como ser esencialmente relacional: no existe primero el individuo y luego la comunidad, sino al revés. La ontología comunitaria contrasta con el individualismo ontológico occidental (desde Locke hasta Rawls) y tiene consecuencias éticas y políticas radicales.">Ontología comunitaria</span>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="school-card c-green">
+        <div class="school-icon green">🤝</div>
+        <h3>Ubuntu</h3>
+        <div class="school-period">África subsahariana · filosofía comunitaria</div>
+        <p>Principio central: <em>"Umuntu ngumuntu ngabantu"</em> — "Una persona es una persona a través de las demás personas".</p>
+        <p>La identidad no es individual sino <span class="em-name">relacional</span>: el yo existe en virtud de sus relaciones con los otros. Desafía radicalmente el individualismo occidental desde Descartes hasta el liberalismo político.</p>
+      </div>
+
+      <div class="school-card c-amber">
+        <div class="school-icon amber">⚖️</div>
+        <h3>Ma'at · Filosofía egipcia antigua</h3>
+        <div class="school-period">Desde el III milenio a.C.</div>
+        <p>Concepto de <span class="em-name">Ma'at</span>: verdad, justicia, armonía cósmica. Es simultáneamente un principio ético, político y cosmológico.</p>
+        <p>Antecede a la filosofía griega y constituye uno de los primeros sistemas éticos de la humanidad. Cheikh Anta Diop argumentó su influencia sobre el pensamiento griego.</p>
+      </div>
+    </div>
+
+    <div class="thinker-row">
+      <div class="thinker-card">
+        <div class="thinker-avatar">N</div>
+        <div class="thinker-body">
+          <div class="thinker-name">Kwame Nkrumah</div>
+          <div class="thinker-dates">1909–1972 · Filósofo y estadista ghanés</div>
+          <p>Fundador del <em>pan-africanismo filosófico</em>. Propone el <em>consciencismo</em>: síntesis crítica entre el pensamiento africano tradicional, el Islam y el cristianismo.</p>
+        </div>
+      </div>
+
+      <div class="thinker-card">
+        <div class="thinker-avatar">F</div>
+        <div class="thinker-body">
+          <div class="thinker-name">Frantz Fanon</div>
+          <div class="thinker-dates">1925–1961 · Filosofía de la descolonización</div>
+          <p>Analiza la alienación del colonizado: el racismo destruye la identidad del sujeto colonizado. En <em>Los condenados de la tierra</em> propone la descolonización como proceso filosófico y político de recuperación de la subjetividad.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <div class="note-label">Debate filosófico</div>
+      <p>¿Es Ubuntu una <em>etnophilosophy</em> (filosofía implícita en la cultura popular) o una filosofía crítica en sentido estricto? El debate entre Paulin Hountondji y otros filósofos africanos sobre la identidad de la "filosofía africana" es uno de los más interesantes de la filosofía contemporánea.</p>
+    </div>
+  </div>
+
+  <!-- COMPARATIVA -->
+  <div id="panel-comparativa" class="panel">
+    <div class="intro-card">
+      <div class="subtitle">Filosofía intercultural</div>
+      <h2>Cuadro comparativo</h2>
+      <p>El encuentro entre tradiciones filosóficas distintas nos revela los supuestos ocultos de nuestra propia manera de pensar. La <em>filosofía intercultural</em> (Raimon Panikkar, Wilhelm Halbfass) propone que ninguna tradición tiene el monopolio de la razón y que el diálogo entre ellas enriquece a todas.</p>
+    </div>
+
+    <div class="comp-table-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Tradición</th>
+            <th>Pregunta central</th>
+            <th>Método</th>
+            <th>Meta</th>
+            <th>Concepción del yo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="trad-dot" style="background:#6A8EC4"></span>Occidental</td>
+            <td>¿Qué es la realidad?</td>
+            <td>Argumentación lógica</td>
+            <td>Verdad racional</td>
+            <td>Individuo autónomo</td>
+          </tr>
+          <tr>
+            <td><span class="trad-dot" style="background:#C4956A"></span>India</td>
+            <td>¿Cómo liberarse del sufrimiento?</td>
+            <td>Meditación + debate</td>
+            <td>Moksha / Nirvana</td>
+            <td>Ilusorio (budismo) o idéntico al Todo (vedanta)</td>
+          </tr>
+          <tr>
+            <td><span class="trad-dot" style="background:#6BAAA0"></span>China</td>
+            <td>¿Cómo vivir y gobernar bien?</td>
+            <td>Práctica y ritual</td>
+            <td>Armonía social</td>
+            <td>Nodo de relaciones sociales</td>
+          </tr>
+          <tr>
+            <td><span class="trad-dot" style="background:#9B8BC4"></span>Islámica</td>
+            <td>¿Razón y fe son compatibles?</td>
+            <td>Comentario + especulación</td>
+            <td>Sabiduría divina</td>
+            <td>Criatura de Dios dotada de razón</td>
+          </tr>
+          <tr>
+            <td><span class="trad-dot" style="background:#7AA86A"></span>Africana</td>
+            <td>¿Qué nos hace humanos?</td>
+            <td>Comunidad + tradición oral</td>
+            <td>Comunidad armónica</td>
+            <td>Ser esencialmente relacional (Ubuntu)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="questions-card">
+      <h3>Preguntas para la reflexión filosófica</h3>
+      <div class="question-item">
+        <div class="q-num">1</div>
+        <p>¿Es posible una filosofía verdaderamente universal o toda filosofía está inevitablemente situada en una cultura y una historia concretas?</p>
+      </div>
+      <div class="question-item">
+        <div class="q-num">2</div>
+        <p>¿Deben las tradiciones no occidentales "traducirse" al lenguaje filosófico occidental para ser consideradas válidas? ¿Qué se pierde en esa traducción?</p>
+      </div>
+      <div class="question-item">
+        <div class="q-num">3</div>
+        <p>El Ubuntu afirma que el yo solo existe en relación con los otros. ¿Es compatible esta visión con el <em>cogito</em> cartesiano? ¿Cuál te parece más verdadera?</p>
+      </div>
+      <div class="question-item">
+        <div class="q-num">4</div>
+        <p>¿Tiene sentido hablar de "filosofía africana" o "filosofía india" como unidades, o son categorías demasiado amplias que agrupan tradiciones muy diversas?</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── Tooltip popup ── -->
+<div id="tooltip-popup">
+  <button class="tooltip-close" id="tooltip-close" aria-label="Cerrar">✕</button>
+  <div class="tooltip-header">
+    <div class="tooltip-icon" id="tooltip-icon">φ</div>
+    <div>
+      <div class="tooltip-term" id="tooltip-term">Término</div>
+      <div class="tooltip-origin" id="tooltip-origin">Origen</div>
+    </div>
+  </div>
+  <div class="tooltip-body">
+    <p id="tooltip-desc"></p>
+  </div>
+</div>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <p>Filosofía · IES Alquipir · Cehegín &nbsp;·&nbsp; Apuntes para 2.º Bachillerato &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#b2d4c0d3dcd1dbc1d1dd9cd8dbdfd7dcd7c886f2dfc7c0d1dbd3d7d6c7d1d39cd7c1"><span class="__cf_email__" data-cfemail="c3a5b1a2ada0aab0a0aceda9aaaea6ada6b9f783aeb6b1a0aaa2a6a7b6a0a2eda6b0">[email&#160;protected]</span></a></p>
+</footer>
+
+<script>
+function showPanel(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+
+  const cards = document.querySelectorAll('#panel-' + id + ' .school-card, #panel-' + id + ' .thinker-card');
+  cards.forEach(c => {
+    c.style.animation = 'none';
+    c.offsetHeight;
+    c.style.animation = '';
+  });
+
+  closeTooltip();
+}
+
+// ── Tooltip system ──
+const popup   = document.getElementById('tooltip-popup');
+const tipIcon = document.getElementById('tooltip-icon');
+const tipTerm = document.getElementById('tooltip-term');
+const tipOrig = document.getElementById('tooltip-origin');
+const tipDesc = document.getElementById('tooltip-desc');
+let activeTag = null;
+
+function positionPopup(el) {
+  const rect = el.getBoundingClientRect();
+  const pw = 320;
+  const margin = 10;
+  let left = rect.left;
+  let top  = rect.bottom + 10;
+
+  if (left + pw + margin > window.innerWidth) {
+    left = window.innerWidth - pw - margin;
+  }
+  if (left < margin) left = margin;
+
+  if (top + popup.offsetHeight + margin > window.innerHeight) {
+    top = rect.top - popup.offsetHeight - 10;
+  }
+
+  popup.style.left = left + 'px';
+  popup.style.top  = top  + 'px';
+}
+
+function openTooltip(el) {
+  tipIcon.textContent = el.dataset.icon || 'φ';
+  tipTerm.textContent = el.dataset.term || el.textContent;
+  tipOrig.textContent = el.dataset.origin || '';
+  tipDesc.textContent = el.dataset.desc  || '';
+
+  popup.classList.remove('visible');
+  popup.style.display = 'block';
+  void popup.offsetWidth;
+  popup.classList.add('visible');
+
+  positionPopup(el);
+  activeTag = el;
+}
+
+function closeTooltip() {
+  popup.classList.remove('visible');
+  setTimeout(() => { if (!popup.classList.contains('visible')) popup.style.display = 'none'; }, 200);
+  activeTag = null;
+}
+
+document.addEventListener('click', e => {
+  const tag = e.target.closest('.concept-tag[data-tooltip]');
+  if (tag) {
+    e.stopPropagation();
+    if (activeTag === tag) { closeTooltip(); return; }
+    openTooltip(tag);
+    return;
+  }
+  if (!popup.contains(e.target)) closeTooltip();
+});
+
+document.getElementById('tooltip-close').addEventListener('click', e => {
+  e.stopPropagation();
+  closeTooltip();
+});
+
+window.addEventListener('scroll', () => {
+  if (activeTag && popup.classList.contains('visible')) positionPopup(activeTag);
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+  if (activeTag && popup.classList.contains('visible')) positionPopup(activeTag);
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeTooltip();
+});
+</script></body>
+</html>
